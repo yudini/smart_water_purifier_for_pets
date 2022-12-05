@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         getShadowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String getShadowURL = "https://kjgnr8bpzc.execute-api.ap-northeast-2.amazonaws.com/prod/devices/Smart_Water_Purifier_for_Dog";
+                String getShadowURL = "https://kjgnr8bpzc.execute-api.ap-northeast-2.amazonaws.com/prod/devices/Smart_Water_Purifier_for_Dog_send";
                 Intent intent = new Intent(MainActivity.this, DeviceActivity.class); //DeviceActivity화면으로 이동하기위한 인텐트
                 intent.putExtra("getShadowURL", getShadowURL);  //getShadowURL을 같이 넘겨줌
                 startActivity(intent);//새로운 화면으로 이동(물그릇 상태 조회 화면)

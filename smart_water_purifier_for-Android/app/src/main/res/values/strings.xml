@@ -4,7 +4,7 @@
     <string name="water_level">물 양:</string>
     <string name="water_state">물 상태:</string>
     <string name="pirState">모터 상태:</string>
-    <string name="motion"> 모션 감지 상태: </string>
+    <string name="water_sensor"> 물 양 최소 기준: </string>
     <string name="temp">온도(c): </string>
     <string name="led">LED 상태: </string>
     <string name="std">급수할 물 양: </string>

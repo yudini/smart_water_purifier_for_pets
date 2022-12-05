@@ -45,23 +45,13 @@ public class GetThingShadow extends GetRequest {
         TextView reported_waterLevelTV = activity.findViewById(R.id.reported_waterLevel);
         TextView reported_pirStateTV = activity.findViewById(R.id.reported_pirState);
         TextView reported_ledTV = activity.findViewById(R.id.reported_led);
-        TextView reported_motionTV = activity.findViewById(R.id.reported_motion);
+        TextView reported_waterSensorTV = activity.findViewById(R.id.reported_waterSensor);
         //텍스트 설정
-        reported_motionTV.setText(state.get("reported_motion"));
+        reported_waterSensorTV.setText(state.get("reported_waterSensor"));
         reported_ledTV.setText(state.get("reported_LED"));
         reported_pirStateTV.setText(state.get("reported_pirState"));
         reported_waterLevelTV.setText(state.get("reported_waterLevel"));
 
-        //textView id로 찾아서 가져옴(최신 물 수위, 모터상태, led, 모션감지여부)
-        TextView desired_waterLevelTV =activity.findViewById(R.id.desired_waterLevel);
-        TextView desired_pirStateTV = activity.findViewById(R.id.desired_pirState);
-        TextView desired_ledTV = activity.findViewById(R.id.desired_led);
-        TextView desired_motionTV = activity.findViewById(R.id.desired_motion);
-        //텍스트 설정
-        desired_motionTV.setText(state.get("desired_motion"));
-        desired_ledTV.setText(state.get("desired_LED"));
-        desired_pirStateTV.setText(state.get("desired_pirState"));
-        desired_waterLevelTV.setText(state.get("desired_waterLevel"));
 
     }
 
@@ -77,25 +67,16 @@ public class GetThingShadow extends GetRequest {
             JSONObject state = root.getJSONObject("state");  //state값 받아와서 JSONObject 객체 생성 및 초기화
             JSONObject reported = state.getJSONObject("reported");  //reported값 받아와서 JSONObject 객체 생성 및 초기화
             String waterLevelValue = reported.getString("Water_Level");  //WaterLevel값 받아옴
+            String waterSensorValue = reported.getString("Water_Sensor"); //물 양 최소 기준 값 받아옴
             String pirStateValue = reported.getString("pirState"); //모터 값 받아옴
             String ledValue = reported.getString("LED"); //led값 받아옴
-            String motionValue = reported.getString("Motion"); //모션 감지 여부 값 받아옴
+
             //output(Map 형태)에 받아온 값들 put
             output.put("reported_waterLevel",waterLevelValue);
+            output.put("reported_waterSensor",waterSensorValue);
             output.put("reported_pirState",pirStateValue);
             output.put("reported_LED",ledValue);
-            output.put("reported_motion",motionValue);
 
-            JSONObject desired = state.getJSONObject("desired"); //desired값 받아와서 JSONObject 객체 생성 및 초기화
-            String desired_waterLevelValue = desired.getString("Water_Level"); //WaterLevel값 받아옴
-            String desired_pirStateValue = desired.getString("pirState"); //모터 값 받아옴
-            String desired_ledValue = desired.getString("LED"); //led값 받아옴
-            String desired_motionValue = desired.getString("Motion"); //모션 감지 여부 값 받아옴
-            //output(Map 형태)에 받아온 값들 put
-            output.put("desired_waterLevel",desired_waterLevelValue);
-            output.put("desired_pirState",desired_pirStateValue);
-            output.put("desired_LED",desired_ledValue);
-            output.put("desired_motion",desired_motionValue);
 
         } catch (JSONException e) {  //예외 처리
             Log.e(TAG, "Exception in processing JSONString.", e);

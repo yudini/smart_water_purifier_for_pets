@@ -65,6 +65,8 @@ public class DeviceActivity extends AppCompatActivity {
         });
 
 
+
+
     }
 
     private void clearTextView() {
@@ -72,22 +74,14 @@ public class DeviceActivity extends AppCompatActivity {
         TextView reported_waterLevelTV = findViewById(R.id.reported_waterLevel);
         TextView reported_pirStateTV = findViewById(R.id.reported_pirState);
         TextView reported_ledTV = findViewById(R.id.reported_led);
-        TextView reported_motionTV = findViewById(R.id.reported_motion);
+        TextView reported_waterSensorTV = findViewById(R.id.reported_waterSensor);
         //텍스트 값을 설정
         reported_ledTV.setText("");
         reported_pirStateTV.setText("");
         reported_waterLevelTV.setText("");
-        reported_motionTV.setText("");
+        reported_waterSensorTV.setText("");
 
-        TextView desired_waterLevelTV =findViewById(R.id.desired_waterLevel);  //최신 물 수위 상태
-        TextView desired_pirStateTV = findViewById(R.id.desired_pirState);   //최신 모터 상태
-        TextView desired_ledTV = findViewById(R.id.desired_led);   //최신 led상태
-        TextView desired_motionTV = findViewById(R.id.desired_motion);  //최신 모션 감지 상태
-        //텍스트 값을 설정
-        desired_ledTV.setText("");
-        desired_pirStateTV.setText("");
-        desired_waterLevelTV.setText("");
-        desired_motionTV.setText("");
+
     }
 
 }

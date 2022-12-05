@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -44,12 +45,6 @@
                 android:textColor="#FFEB3B"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="최신 상태 (desired)"
-                android:textColor="#FFEB3B"
-                android:textStyle="bold" />
         </TableRow>
 
         <TableRow>
@@ -71,6 +66,11 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
+
+        </TableRow>
+
+        <TableRow>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -79,15 +79,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/water_level"
+                    android:text="@string/water_sensor"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/desired_waterLevel"
+                    android:id="@+id/reported_waterSensor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
-
 
         </TableRow>
 
@@ -110,22 +109,7 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pirState"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/desired_pirState"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
         </TableRow>
 
 
@@ -149,66 +133,8 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/led"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/desired_led"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
         </TableRow>
 
-        <TableRow>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/motion"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/reported_motion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/motion"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/desired_motion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </TableRow>
     </TableLayout>
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="19dp"
-        android:background="?android:attr/listDivider" />
 
 </LinearLayout>
