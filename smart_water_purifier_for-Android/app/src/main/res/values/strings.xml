@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android-ResAPI</string>
+    <string name="app_name">Smart_Water_Purifier_for_Pets!</string>
     <string name="device_state">디바이스 최신 상태</string>
     <string name="water_level">물 양:</string>
     <string name="water_state">물 상태:</string>
